@@ -1,7 +1,10 @@
- 
-/* SpendWise Dashboard - Week 4 */
 
-/* 1. CSS Custom Properties */
+/* =========================================
+   SPENDWISE DASHBOARD - PLP WEEK 4
+   CSS Grid, Flexbox and Responsive Design
+========================================= */
+
+/* 1. CSS CUSTOM PROPERTIES */
 :root {
     --brand-color: #245c46;
     --accent-color: #d6a84f;
@@ -14,7 +17,7 @@
     --shadow-color: rgba(30, 60, 45, 0.08);
 }
 
-/* 2. General Styling */
+/* 2. GENERAL STYLING */
 * {
     margin: 0;
     padding: 0;
@@ -28,17 +31,17 @@ body {
     line-height: 1.6;
 }
 
-/* 3. Main Dashboard Layout - CSS Grid */
+/* 3. MAIN DASHBOARD LAYOUT - CSS GRID */
 .dashboard {
     display: grid;
     grid-template-columns: 250px minmax(0, 1fr);
     min-height: 100vh;
 }
 
-/* 4. Sidebar - Flexbox */
+/* 4. SIDEBAR - FLEXBOX */
 .sidebar {
     background-color: var(--brand-color);
-    color: white;
+    color: #ffffff;
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
@@ -63,7 +66,7 @@ body {
 }
 
 .navigation a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 12px;
     border-radius: 8px;
@@ -78,13 +81,13 @@ body {
     transform: translateX(4px);
 }
 
-/* 5. Main Content */
+/* 5. MAIN CONTENT */
 .main-content {
     padding: 30px;
     min-width: 0;
 }
 
-/* 6. Header - Flexbox */
+/* 6. HEADER - FLEXBOX */
 .header {
     display: flex;
     justify-content: space-between;
@@ -119,7 +122,7 @@ body {
     font-weight: bold;
 }
 
-/* 7. Monthly Overview - Flexbox */
+/* 7. MONTHLY OVERVIEW - FLEXBOX */
 .overview {
     display: flex;
     justify-content: space-between;
@@ -152,7 +155,7 @@ body {
     border-radius: 8px;
 }
 
-/* 8. Summary Cards - CSS Grid */
+/* 8. SUMMARY CARDS - CSS GRID AND FLEXBOX */
 .summary-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -166,6 +169,13 @@ body {
     border-radius: 12px;
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 15px var(--shadow-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transition: transform 200ms ease,
+                box-shadow 200ms ease;
 }
 
 .summary-card p {
@@ -178,7 +188,7 @@ body {
     font-size: 25px;
 }
 
-/* 9. Spending Categories - CSS Grid */
+/* 9. SPENDING CATEGORIES - CSS GRID */
 .categories-section {
     margin-bottom: 35px;
 }
@@ -193,12 +203,18 @@ body {
     gap: 20px;
 }
 
+/* CATEGORY CARDS - FLEXBOX */
 .category-card {
     background-color: var(--surface-color);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 22px;
     box-shadow: 0 4px 15px var(--shadow-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
     transition: transform 200ms ease,
                 box-shadow 200ms ease;
 }
@@ -223,10 +239,11 @@ body {
     font-size: 14px;
 }
 
-/* 10. Hover and Keyboard Focus Effects */
+/* 10. HOVER AND KEYBOARD FOCUS EFFECTS */
 .category-card:hover,
 .category-card:focus-visible,
-.summary-card:hover {
+.summary-card:hover,
+.navigation a:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px var(--shadow-color);
 }
@@ -237,7 +254,7 @@ body {
     outline-offset: 3px;
 }
 
-/* 11. Footer */
+/* 11. FOOTER */
 .footer {
     border-top: 1px solid var(--border-color);
     padding-top: 20px;
@@ -245,8 +262,9 @@ body {
     font-size: 13px;
 }
 
-/* 12. Responsive Design - Mobile Screens */
+/* 12. RESPONSIVE DESIGN - MOBILE SCREENS */
 @media (max-width: 767px) {
+
     .dashboard {
         grid-template-columns: 1fr;
     }
@@ -286,7 +304,7 @@ body {
     }
 }
 
-/* 13. Dark Theme - Overrides Root Variables Only */
+/* 13. DARK THEME - ROOT VARIABLES ONLY */
 @media (prefers-color-scheme: dark) {
     :root {
         --brand-color: #173d30;
