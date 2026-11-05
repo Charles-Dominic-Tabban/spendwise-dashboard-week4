@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,40 +7,33 @@
     <title>SpendWise Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="dashboard">
 
         <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="brand">
-                <div class="brand-icon">S</div>
-                <h2>SpendWise</h2>
-            </div>
+            <h2 class="logo">SpendWise</h2>
 
             <p class="menu-title">MAIN MENU</p>
 
             <nav class="navigation">
-                <a href="#" class="nav-link active">⌂ Dashboard</a>
-                <a href="#" class="nav-link">↗ Transactions</a>
-                <a href="#" class="nav-link">▤ Budgets</a>
-                <a href="#" class="nav-link">◷ Reports</a>
-                <a href="#" class="nav-link">⚙ Settings</a>
+                <a href="#" class="active">⌂ Dashboard</a>
+                <a href="#">↗ Transactions</a>
+                <a href="#">▤ Budgets</a>
+                <a href="#">◷ Reports</a>
+                <a href="#">⚙ Settings</a>
             </nav>
-
-            <div class="sidebar-bottom">
-                <p>Spend smarter.</p>
-                <strong>Live better.</strong>
-            </div>
         </aside>
 
-        <!-- Main Dashboard -->
+        <!-- Main Content -->
         <main class="main-content">
 
             <!-- Header -->
             <header class="header">
                 <div>
-                    <p class="welcome">Welcome back!</p>
+                    <p>Welcome back!</p>
                     <h1>Financial Overview</h1>
                 </div>
 
@@ -47,7 +41,7 @@
                     <div class="avatar">GA</div>
                     <div>
                         <strong>Gabriel</strong>
-                        <small>Personal Account</small>
+                        <p>Personal Account</p>
                     </div>
                 </div>
             </header>
@@ -57,85 +51,99 @@
                 <div>
                     <p class="section-label">YOUR FINANCES</p>
                     <h2>Monthly Spending</h2>
-                    <p class="description">
-                        Here is a summary of your financial activities.
-                    </p>
+                    <p>Here is a summary of your financial activities.</p>
                 </div>
 
-                <div class="month">November 2026</div>
+                <span class="month">November 2026</span>
             </section>
 
             <!-- Summary Cards -->
             <section class="summary-grid">
 
-                <article class="summary-card" tabindex="0">
-                    <div class="card-top">
-                        <span>Total Budget</span>
-                        <span class="card-icon">◎</span>
-                    </div>
-                    <h3>KSh 80,000</h3>
+                <article class="summary-card">
+                    <p>Total Budget</p>
+                    <h2>KSh 80,000</h2>
                     <p>Monthly planned budget</p>
                 </article>
 
-                <article class="summary-card" tabindex="0">
-                    <div class="card-top">
-                        <span>Total Expenses</span>
-                        <span class="card-icon">↗</span>
-                    </div>
-                    <h3>KSh 42,500</h3>
+                <article class="summary-card">
+                    <p>Total Expenses</p>
+                    <h2>KSh 42,500</h2>
                     <p>Money spent this month</p>
                 </article>
 
-                <article class="summary-card" tabindex="0">
-                    <div class="card-top">
-                        <span>Remaining Balance</span>
-                        <span class="card-icon">✓</span>
-                    </div>
-                    <h3>KSh 37,500</h3>
+                <article class="summary-card">
+                    <p>Remaining Balance</p>
+                    <h2>KSh 37,500</h2>
                     <p>Available balance</p>
                 </article>
 
             </section>
 
             <!-- Spending Categories -->
-            <section class="categories">
+            <section class="categories-section">
 
                 <div class="section-heading">
-                    <h2>Spending Categories</h2>
-                    <p>Track where your money goes.</p>
+                    <div>
+                        <h2>Spending Categories</h2>
+                        <p>Track where your money goes.</p>
+                    </div>
                 </div>
 
-                <div class="category-grid">
+                <div class="categories">
 
                     <article class="category-card" tabindex="0">
-                        <div class="category-top">
-                            <span class="category-icon">🍲</span>
-                            <span class="category-status">Monthly</span>
-                        </div>
+                        <span>🍲 Monthly</span>
                         <h3>Food</h3>
-                        <p class="amount">KSh 8,500</p>
-                        <p class="category-note">Groceries and meals</p>
+                        <h2>KSh 8,500</h2>
+                        <p>Groceries and meals</p>
                     </article>
 
                     <article class="category-card" tabindex="0">
-                        <div class="category-top">
-                            <span class="category-icon">🚌</span>
-                            <span class="category-status">Monthly</span>
-                        </div>
+                        <span>🚌 Monthly</span>
                         <h3>Transport</h3>
-                        <p class="amount">KSh 4,000</p>
-                        <p class="category-note">Bus fare and fuel</p>
+                        <h2>KSh 4,000</h2>
+                        <p>Bus fare and fuel</p>
                     </article>
 
                     <article class="category-card" tabindex="0">
-                        <div class="category-top">
-                            <span class="category-icon">🏠</span>
-                            <span class="category-status">Monthly</span>
-                        </div>
+                        <span>🏠 Monthly</span>
                         <h3>Rent</h3>
-                        <p class="amount">KSh 15,000</p>
-                        <p class="category-note">Monthly house rent</p>
+                        <h2>KSh 15,000</h2>
+                        <p>Monthly house rent</p>
                     </article>
 
                     <article class="category-card" tabindex="0">
-                        <div class="category
+                        <span>🎬 Monthly</span>
+                        <h3>Entertainment</h3>
+                        <h2>KSh 3,500</h2>
+                        <p>Movies and leisure</p>
+                    </article>
+
+                    <article class="category-card" tabindex="0">
+                        <span>💰 Monthly</span>
+                        <h3>Savings</h3>
+                        <h2>KSh 7,000</h2>
+                        <p>Money saved this month</p>
+                    </article>
+
+                    <article class="category-card" tabindex="0">
+                        <span>💡 Monthly</span>
+                        <h3>Utilities</h3>
+                        <h2>KSh 4,500</h2>
+                        <p>Water and electricity</p>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>© 2026 SpendWise. Manage your money wisely.</p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
